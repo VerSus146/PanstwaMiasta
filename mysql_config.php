@@ -14,9 +14,19 @@
 
     } else {
 
-        $sql_query = 'SELECT ID from panstwamiasta WHERE ID="1"';
-        $con->query($sql_query);
+        $sql_query = 'SELECT Panstwa from panstwamiasta WHERE ID="1"';
+        $result = $con->query($sql_query);
+    
+        if($result->num_rows > 0) { 
+            while ($row = $result->fetch_assoc()){
 
+        echo ' Twoje panstwo: ' . $row['Panstwa'];
+
+        }
+
+    } else {
+        echo ' 0 wyników';
     }
+}   
         $con->close();
 ?>
