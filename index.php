@@ -1,3 +1,9 @@
+<?php
+
+include 'mysql_config.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
