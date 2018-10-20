@@ -2,13 +2,11 @@ function send_answer(){
 
     let data = document.getElementById("answer").value;
     let query = document.getElementById("question").innerHTML;
-    console.log(data)
-    console.log(query)
 
     var httpc = new XMLHttpRequest();
     var url = "mysql_query.php";
     
-    action = "data="+data;
+    action = "data="+data+"&query="+query;
     httpc.open("POST", url, true);
     
     httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
