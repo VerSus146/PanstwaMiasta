@@ -1,9 +1,3 @@
-<?php
-
-include 'mysql_config.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -20,13 +14,14 @@ include 'mysql_config.php';
 <div id="container">
 <div id="top">
 
-<h1><span id="question">Tu będzie wylosowana rzecz</span></h1>
+<h1><span id="question"></span></h1>
 
 </div>
 <div id="content">
 
     <div class="main">
-
+<br><br>
+<div id="points">0</div>
 <input type="text" id="answer" value="">
 
 <br /><br />

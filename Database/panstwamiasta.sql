@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 17 Paź 2018, 19:52
--- Wersja serwera: 10.1.28-MariaDB
--- Wersja PHP: 7.1.10
+-- Czas generowania: 20 Paź 2018, 19:51
+-- Wersja serwera: 10.1.36-MariaDB
+-- Wersja PHP: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,12 +25,154 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `kolory`
+--
+
+CREATE TABLE `kolory` (
+  `ID` int(11) NOT NULL,
+  `kolory` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Zrzut danych tabeli `kolory`
+--
+
+INSERT INTO `kolory` (`ID`, `kolory`) VALUES
+(1, 'biały'),
+(2, 'alabastrowy'),
+(3, 'kość słoniowa'),
+(4, 'mleczny'),
+(5, 'chamois'),
+(6, 'kremowy'),
+(7, 'perłowy'),
+(8, 'porcelanowy'),
+(9, 'amarantowy'),
+(10, 'arbuzowy'),
+(11, 'biskupi'),
+(12, 'cyklamen'),
+(13, 'eozyna'),
+(14, 'łososiowy'),
+(15, 'magenta'),
+(16, 'majtkowy'),
+(17, 'malinowy'),
+(18, 'pąsowy'),
+(19, 'róż indyjski'),
+(20, 'róż pompejański'),
+(21, 'róż wenecki'),
+(22, 'różowy'),
+(23, 'rubinowy'),
+(24, 'bordowy'),
+(25, 'buraczkowy'),
+(26, 'burgund'),
+(27, 'ceglasty'),
+(28, 'cynobrowy'),
+(29, 'czerwień alizarynowa'),
+(30, 'czerwień wzrokowa'),
+(31, 'czerwień żelazowa'),
+(32, 'czerwony'),
+(33, 'fuksja'),
+(34, 'kardynalski'),
+(35, 'karmazynowy'),
+(36, 'karminowy'),
+(37, 'magenta'),
+(38, 'makowy'),
+(39, 'poziomkowy'),
+(40, 'rdzawy'),
+(41, 'rudy'),
+(42, 'szkarłatny'),
+(43, 'tango'),
+(44, 'truskawkowy'),
+(45, 'wiśniowy'),
+(46, 'brzoskwiniowy'),
+(47, 'bursztynowy'),
+(48, 'brązowy'),
+(49, 'cynamonowy'),
+(50, 'herbaciany'),
+(51, 'koralowy'),
+(52, 'marchewkowy'),
+(53, 'miedziany'),
+(54, 'miodowy'),
+(55, 'morelowy'),
+(56, 'ochra'),
+(57, 'oranż'),
+(58, 'pomarańczowy'),
+(59, 'siena palona'),
+(60, 'tycjan'),
+(61, 'ugier'),
+(62, 'złocisty'),
+(63, 'beżowy'),
+(64, 'brunatny'),
+(65, 'czekoladowy'),
+(66, 'heban'),
+(67, 'kakaowy'),
+(68, 'kasztanowy'),
+(69, 'khaki'),
+(70, 'mahoń'),
+(71, 'palisander'),
+(72, 'orzechowy'),
+(73, 'sepia'),
+(74, 'spiżowy'),
+(75, 'tabaczkowy'),
+(76, 'umbra'),
+(77, 'bahama yellow'),
+(78, 'bananowy'),
+(79, 'cytrynowy'),
+(80, 'kanarkowy'),
+(81, 'piwny'),
+(82, 'siarkowy'),
+(83, 'słomkowy'),
+(84, 'stare złoto'),
+(85, 'szafranowy'),
+(86, 'zieleń wiosenna'),
+(87, 'złoty'),
+(88, 'żółty'),
+(89, 'malachitowy'),
+(90, 'marengo'),
+(91, 'miętowy'),
+(92, 'morski'),
+(93, 'oliwkowy'),
+(94, 'patynowy'),
+(95, 'pistacjowy'),
+(96, 'seledynowy'),
+(97, 'szmaragdowy'),
+(98, 'trawiasty'),
+(99, 'zieleń butelkowa'),
+(100, 'zieleń jaskrawa'),
+(101, 'zieleń Veronese\'a'),
+(102, 'zieleń zgniła'),
+(103, 'zielony'),
+(104, 'atramentowy'),
+(105, 'błękit królewski'),
+(106, 'błękit paryski'),
+(107, 'błękit pruski'),
+(108, 'błękit Thénarda'),
+(109, 'błękit Turnbulla'),
+(110, 'chabrowy'),
+(111, 'kobaltowy'),
+(112, 'lapis-lazuli'),
+(113, 'lazurowy'),
+(114, 'modry'),
+(115, 'niebieski'),
+(116, 'siny'),
+(117, 'szafirowy'),
+(118, 'ultramaryna'),
+(119, 'turkusowy'),
+(120, 'lawendowy'),
+(121, 'ametystowy'),
+(122, 'fioletowy'),
+(123, 'fiołkowy'),
+(124, 'jagodowy'),
+(125, 'purpurowy');
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `panstwa`
 --
 
 CREATE TABLE `panstwa` (
   `ID` int(11) NOT NULL,
-  `Panstwa` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+  `Panstwa` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -71,9 +213,7 @@ INSERT INTO `panstwa` (`ID`, `Panstwa`) VALUES
 (31, 'Faso'),
 (32, 'Burundi'),
 (33, 'Chile'),
-(34, 'Chińska'),
-(35, 'Republika'),
-(36, 'Ludowa'),
+(34, 'Chińska Republika Ludowa'),
 (37, 'Chorwacja'),
 (38, 'Cypr'),
 (39, 'Cypr'),
@@ -81,8 +221,7 @@ INSERT INTO `panstwa` (`ID`, `Panstwa`) VALUES
 (41, 'Czad'),
 (42, 'Czarnogóra'),
 (43, 'Dania'),
-(44, 'Demokratyczna'),
-(45, 'Republika Konga'),
+(45, 'Demokratyczna Republika Konga'),
 (46, 'Dominika'),
 (47, 'Dominikana'),
 (48, 'Dżibuti'),
@@ -258,7 +397,13 @@ INSERT INTO `panstwa` (`ID`, `Panstwa`) VALUES
 --
 
 --
--- Indexes for table `panstwa`
+-- Indeksy dla tabeli `kolory`
+--
+ALTER TABLE `kolory`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indeksy dla tabeli `panstwa`
 --
 ALTER TABLE `panstwa`
   ADD PRIMARY KEY (`ID`);
@@ -266,6 +411,12 @@ ALTER TABLE `panstwa`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT dla tabeli `kolory`
+--
+ALTER TABLE `kolory`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- AUTO_INCREMENT dla tabeli `panstwa`
