@@ -3,6 +3,8 @@ function send_answer(){
     let data = document.getElementById("answer").value;
     let query = document.getElementById("question").innerHTML;
 
+    console.log("Chuj kurwa")
+
     var httpc = new XMLHttpRequest();
     var url = "mysql_query.php";
     
@@ -16,6 +18,7 @@ function send_answer(){
         if(httpc.readyState == 4 && httpc.status == 200) {
             switch(httpc.responseText){
                 case "correct":
+                    console.log("Dziala");
                     count_points(data);
                     break;
                     
@@ -31,8 +34,6 @@ function send_answer(){
         var pointsDiv = document.getElementById("points");
         var pointsToAdd = parseInt(word.replace(/\s+/g, '').length);
         var actualPoints = parseInt(pointsDiv.innerHTML);
-        console.log(actualPoints);
-        console.log(pointsToAdd + actualPoints);
         var newPointsNumber = pointsToAdd + actualPoints;
         
         pointsDiv.innerHTML = newPointsNumber;
