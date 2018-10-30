@@ -3,8 +3,6 @@ function send_answer(){
     let data = document.getElementById("answer").value;
     let query = document.getElementById("question").innerHTML;
 
-    console.log("Chuj kurwa")
-
     var httpc = new XMLHttpRequest();
     var url = "mysql_query.php";
     
