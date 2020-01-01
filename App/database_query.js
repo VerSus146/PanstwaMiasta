@@ -1,4 +1,4 @@
-var question_display = document.getElementById("question");
+var time = 10;
 
 function database_query() {
 
@@ -7,17 +7,26 @@ function database_query() {
     
     switch(random_number){
         case 0:
-        query = "Państwo";
-        break;
+            query = "Państwo";
+            break;
 
         case 1:
-        query = "Miasto";
-        break;
+            query = "Miasto";
+            break;
 
         case 2:
-        query = "Kolor";
-        break;
+            query = "Kolor";
+            break;
     }
 
     document.getElementById("question").innerHTML = query;
+}
+
+function timer(){
+    if(time > 0){
+        document.getElementById("timer").innerHTML = "Time: " + time--;
+    } else {
+        count_points(-10);
+        next_round(round)
+    }
 }
